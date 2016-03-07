@@ -1,0 +1,272 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family:'Raleway', arial, sans-serif;
+	background: #fefefe;
+}
+
+h1, h2, h3, h4, h5 {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	a {
+		color: #333;
+		&:hover, &:active, &:focus {
+			color: $blue;
+		}
+	}
+}
+
+#content {
+	opacity: 0;
+	min-height: 320px;
+}
+
+a {
+	color: $blue;
+	transition: all 0.2s ease-out;
+	&:hover, &:active, &:focus {
+		color: $blue;
+		text-decoration: none;
+		p {
+			color: #333;
+		}
+	}
+}
+
+nav {
+	background: $yellow;
+	line-height: 45px;
+	.container {
+		position: relative;
+	}
+	a {
+		color: #fff;
+		display: inline-block;
+		transition: all 0.2s ease-out;
+		font-weight: bold;
+		&.new-link {
+			float: right;
+		}
+		&:hover, &:active {
+			text-decoration: none;
+			color: rgba(250,250,250,0.85);
+		}
+	}
+	.site-id {
+		text-transform: uppercase;		
+		padding: 0 20px 0 0;
+		color: $brown;
+		letter-spacing: 0.15em;
+		position: relative;
+		line-height: 50px;
+		height: 50px;
+		transition: all 0.2s ease-out;
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			color: lighten($brown, 6);
+		}
+	}
+	@media (min-width:991px) {
+		padding: 40px 0;		
+		.site-id {
+			padding: 0 30px;
+			height: 100%;
+			border: 2px solid lighten($brown, 36);
+			&:hover, &:active, &:focus {
+				border-color:$brown;
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #eee;
+	border-top:1px solid #ddd;
+	color: #fff;
+	padding: 45px 0;
+	ul {
+		list-style-type: none;
+		margin:0 0 15px 0;
+		padding:0;
+		li {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	a {
+		color: rgba(0,0,0,0.3);
+		font-size: 3.2rem;
+		transition: color 0.3s;
+		&:hover {
+			color: $blue;
+		}
+	}
+	p {
+		color: rgba(0,0,0,0.6);
+		font-size: 1.2rem;
+	}
+	h5 {
+		color: rgba(0,0,0,0.8);
+		margin: 0 0 10px 0;
+		font-size: 1.8rem;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+	transition: all 0.4s ease-in-out;
+  opacity: 1 !important;
+	&.body {
+		transition: all 0.8s ease-in-out;
+	}
+}
+
+form {
+	display: block;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+label {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+input, textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+}
+
+input:active, input:focus {
+	-webkit-appearance: none;
+}
+
+input[type="text"], textarea {
+	border: 1px solid #ddd;
+}
+
+textarea {
+	min-height: 400px;
+	max-width: 100%;
+}
+
+input[type="submit"] {
+	width: auto;
+	display:inline-block;
+	padding: 0 15px;
+	text-align: center;
+	color: #fff;
+	background: $blue;
+	transition: all 0.2s ease-out;
+	border-radius: 5px;
+	line-height: 40px;
+	border: 0;
+	&:hover, &:active, &:focus {
+		background: lighten($blue, 5);
+		color: #fff;
+	}
+}
+
+.hero {
+	background: $yellow;
+	padding: 25px 0;
+	h1 {
+		font-size: 24px;
+		text-align: center;
+		line-height: 1;
+		margin: 0;
+	}
+	@media (min-width:991px) {
+		padding: 75px 0 35px 0;
+		h1 {
+			font-size: 36px;
+		}
+	}
+}
+
+.page-title {
+	font-size: 32px;
+	margin: 0 0 35px 0;
+	line-height: 1;
+}
+
+.u-button {
+	display:inline-block;
+	padding: 0 15px;
+	text-align: center;
+	color: #fff;
+	background: $blue;
+	letter-spacing:0.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size:1.4rem;
+	transition: all 0.2s ease-out;
+	border-radius: 5px;
+	line-height: 40px;
+	margin-right: 5px;
+	&:hover, &:active, &:focus {
+		background: lighten($blue, 5);
+		color: #fff;
+	}
+	&.u-button-grey {
+		background-color: #eee;
+		color: #333;
+		&:hover, &:active, &:focus {
+			color: #333;
+			background-color: #ddd;
+		}
+	}
+}
+
+.u-title {
+	font-size: 16px;
+}
+.u-date {
+	color: #777;
+	font-weight: 300;
+	font-size:1.2rem;
+	margin-bottom: 25px;
+}
+
+.m-post-show {
+	background: #fff;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	padding: 15px;
+	margin-bottom: 15px;
+	@media (min-width:991px) {
+		padding: 25px;
+		margin-bottom: 0;
+	}
+	h2 {
+		margin: 0 0 10px 0;
+		font-size: 24px;
+		a {
+			color: #333;
+			text-decoration: none;
+			&:hover, &:active, &:focus {
+				color: $blue;
+			}
+		}
+	}
+	p {
+		color: #777;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.5;
+		margin-bottom: 10px;
+	}
+}

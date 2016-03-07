@@ -1,1 +1,12 @@
-hello
+<div class="container margin-md">
+	<h1 class="page-title">View all Posts</h1>
+	<% @posts.each do |post| %>
+		<%= link_to post, :class=>'m-posts-index' do %>
+			<h4 class="u-title">
+				<%= truncate(post.title, :length=>24) %>
+			</h4>
+			<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
+			<p><%= truncate(post.content, :length=>60) %></p>
+		<% end %>
+	<% end %>
+</div>

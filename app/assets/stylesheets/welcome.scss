@@ -1,0 +1,29 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.l-home {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	@media (min-width:991px) {
+		margin-top: 45px;
+		margin-bottom: 45px;
+	}
+	h2 {
+		font-size: 24px;
+		margin-bottom: 0;
+		&:after {
+			content: "";
+			display: block;
+			margin: 10px 0 35px 0;
+			height: 2px;
+			width: 100%;
+			max-width: 80px;
+			background: $blue;
+		}
+	}
+}
+
+.l-home-posts {
+	
+}

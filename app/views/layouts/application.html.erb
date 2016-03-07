@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jeremy</title>
+  <title>Jeremy Venegas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/icon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/icon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/icon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/icon/manifest.json">
+  <link rel="shortcut icon" href="/images/icon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/images/icon/mstile-144x144.png">
+  <meta name="msapplication-config" content="/images/icon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-<%= yield %>
+<nav>
+	<div class="container">
+		<%= link_to "Jeremy Venegas", root_path , :class=>'site-id' %>
+	</div>
+</nav>
+
+<div id="content">
+	<%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/jeremyvenegas" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i></a></li>
+      <li><a href="https://www.behance.net/jeremyvenegas" target="_blank"><i class="fa fa-fw fa-behance-square"></i></a></li>
+      <li><a href="https://twitter.com/dirtychump" target="_blank"><i class="fa fa-fw fa-twitter-square"></i></a></li>
+      <li><a href="https://github.com/jerv" target="_blank"><i class="fa fa-fw fa-github-square"></i></a></li>
+    </ul>
+    <h5>(559) 538-0167 <span>|</span> jeremymvenegas@gmail.com</h5>
+    <p>Jeremy Venegas is currently based in Fresno CA with his wife and baby boy.</p>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var element = document.getElementById("js-fadeInElement");
+    $(element).addClass('js-fade-element-hide');
+
+    $('#content, .fade').addClass('js-fade-element-show');
+
+    $(window).scroll(function() {
+      if( $("#js-fadeInElement").length > 0 ) {
+        var elementTopToPageTop = $(element).offset().top;
+        var windowTopToPageTop = $(window).scrollTop();
+        var windowInnerHeight = window.innerHeight;
+        var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+        var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+        var distanceFromBottomToAppear = 100;
+
+        if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+          $(element).addClass('js-fade-element-show');
+        }
+        else if(elementTopToWindowBottom < 0) {
+          $(element).removeClass('js-fade-element-show');
+          $(element).addClass('js-fade-element-hide');
+        }
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

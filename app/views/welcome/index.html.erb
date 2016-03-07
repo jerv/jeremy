@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row l-home">
+		<div class="col-xs-12 col-md-4">
+			<h2>About me</h2>
+			<p>
+				For over 3 years I have been developing &amp; designing websites.
+			</p>
+			<p>
+				I love html, css, javascript, and rails.
+			</p>
+			<p>
+			I want to thank you for visiting my site.
+			</p>
+			<p>
+				 Enjoy your stay.
+			</p>
+		</div>
+		<div class="col-xs-12 col-md-4 l-home-posts">
+			<h2><%= link_to 'Updates', posts_path %></h2>
+			<% @posts.each do |post| %>
+					<h4 class="u-title">
+						<%= link_to truncate(post.title, :length=>24), post %>
+					</h4>
+					<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
+			<% end %>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<h2>Stuff by me</h2>
+		</div>
+	</div>
+</div>

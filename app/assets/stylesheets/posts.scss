@@ -1,3 +1,46 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.m-posts-index {
+	margin: 45px 0 0 0;
+	display: block;
+	color: #333;
+	&:hover, &:active, &:focus {
+		color: $blue;
+	}
+	&:after {
+		content: "";
+		display: block;
+		margin: 45px 0;
+		height: 2px;
+		width: 100%;
+		max-width: 140px;
+		background: #bbb;
+	}
+	&:last-of-type {
+		margin-bottom: 45px;
+		&:after {
+			display: none;
+		}
+	}
+	@media (min-width:991px) {
+		margin: 55px 0 0 0;
+		&:after {
+			margin: 55px 0;
+		}
+		&:last-of-type {
+			margin-bottom: 55px;
+		}
+		.u-title {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+.m-blog-body p {
+	color: #777;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.5;
+}
