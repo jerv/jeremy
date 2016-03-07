@@ -23,6 +23,7 @@
 					</h4>
 					<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
 			<% end %>
+			<%= link_to 'View all', posts_path %>
 		</div>
 		<div class="col-xs-12 col-md-4">
 			<h2><%= link_to 'Stuff by me', projects_path %></h2>
@@ -32,6 +33,7 @@
 					</h4>
 					<h5 class="u-date"><%= project.link %></h5>
 			<% end %>
+			<%= link_to 'View all', projects_path %>
 		</div>
 	</div>
 </div>

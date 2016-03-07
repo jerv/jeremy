@@ -59,26 +59,68 @@ nav {
 	}
 	.site-id {
 		text-transform: uppercase;		
-		padding: 0 20px 0 0;
+		padding: 0 15px;
 		color: $brown;
 		letter-spacing: 0.15em;
 		position: relative;
 		line-height: 50px;
+		box-sizing: border-box;
+		font-size: 1.4rem;
 		height: 50px;
 		transition: all 0.2s ease-out;
 		&:hover, &:active, &:focus {
 			text-decoration: none;
 			color: lighten($brown, 6);
+			background: rgba(250,250,250,0.4);
+		}
+	}
+	.u-button {
+		float: right;
+		background: none;
+		color: #333;
+		margin-right: 0;
+		box-shadow: none;
+		&:hover, &:active, &:focus {
+			box-shadow: none;
+			color: #333;
+			background: rgba(250,250,250,0.4);
+		}
+	}
+	@media (max-width:990px) {
+		.container {
+			max-width: none;
+			width: 100%;
+			padding: 0;
+		}
+		.u-button {
+			span {
+				display: none;
+			}
 		}
 	}
 	@media (min-width:991px) {
-		padding: 40px 0;		
+		padding: 40px 0;
+		.u-button {
+			background: $blue;
+			color: #fff;
+			box-shadow:0 4px 8px rgba(0,0,0,0.1);
+			i {
+				display: none;
+			}
+			&:hover, &:active, &:focus {
+				box-shadow:0 6px 12px rgba(0,0,0,0.15);
+				background: lighten($blue, 5);
+				box-shadow:0 6px 12px rgba(0,0,0,0.2);
+				color: #fff;
+			}
+		}		
 		.site-id {
 			padding: 0 30px;
 			height: 100%;
-			border: 2px solid lighten($brown, 36);
+			box-shadow: 0 0 0 2px lighten($brown, 36) inset;
 			&:hover, &:active, &:focus {
-				border-color:$brown;
+				box-shadow: 0 0 0 2px $brown inset;
+				background: none;
 			}
 		}
 	}
@@ -173,8 +215,11 @@ input[type="submit"] {
 	color: #fff;
 	background: $blue;
 	transition: all 0.2s ease-out;
-	border-radius: 5px;
-	line-height: 40px;
+	letter-spacing:0.1em;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 50px;
 	border: 0;
 	&:hover, &:active, &:focus {
 		background: lighten($blue, 5);
@@ -220,11 +265,12 @@ input[type="submit"] {
 	font-weight: 700;
 	font-size:1.4rem;
 	transition: all 0.2s ease-out;
-	border-radius: 5px;
-	line-height: 40px;
+	line-height: 50px;
 	margin-right: 5px;
+	box-shadow:0 4px 8px rgba(0,0,0,0.1);
 	&:hover, &:active, &:focus {
 		background: lighten($blue, 5);
+		box-shadow:0 6px 12px rgba(0,0,0,0.2);
 		color: #fff;
 	}
 	&.u-button-grey {
