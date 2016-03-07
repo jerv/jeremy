@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
