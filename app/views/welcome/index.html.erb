@@ -19,7 +19,7 @@
 			<h2><%= link_to 'Updates', posts_path %></h2>
 			<% @posts.each do |post| %>
 					<h4 class="u-title">
-						<%= link_to truncate(post.title, :length=>24), post %>
+						<%= link_to truncate(post.title, :length=>50), post %>
 					</h4>
 					<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
 			<% end %>
@@ -29,7 +29,7 @@
 			<h2><%= link_to 'Projects', projects_path %></h2>
 			<% @projects.each do |project| %>
 					<h4 class="u-title">
-						<%= link_to truncate(project.title, :length=>24), project %>
+						<%= link_to truncate(project.title, :length=>50), project %>
 					</h4>
 					<h5 class="u-date"><%= project.link %></h5>
 			<% end %>

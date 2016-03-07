@@ -26,7 +26,16 @@ img {
 #content {
 	opacity: 0;
 	@media (min-width:991px) {
-		min-height: 320px;
+		min-height: 500px;
+	}
+}
+
+.markdown-body {
+	h1, h2 {
+		margin-top: 65px;
+	}
+	h3, h4, h5 {
+		margin-top: 45px;
 	}
 }
 
@@ -71,7 +80,7 @@ nav {
 		box-sizing: border-box;
 		font-size: 1.4rem;
 		height: 50px;
-		transition: all 0.2s ease-out;
+		transition: background 0.2s ease-out;
 		&:hover, &:active, &:focus {
 			text-decoration: none;
 			color: lighten($brown, 6);
@@ -121,10 +130,10 @@ nav {
 		.site-id {
 			padding: 0 30px;
 			height: 100%;
-			box-shadow: 0 0 0 2px lighten($brown, 36) inset;
+			box-shadow: 0 0 0 2px $brown inset;
 			&:hover, &:active, &:focus {
-				box-shadow: 0 0 0 2px $brown inset;
-				background: none;
+				background: $brown;
+				color: #fff;
 			}
 		}
 	}
@@ -160,8 +169,7 @@ footer {
 		color: rgba(0,0,0,0.8);
 		margin: 0 0 10px 0;
 		font-size: 1.8rem;
-		letter-spacing: 0;
-		text-transform: none;
+		letter-spacing: 0.05em;
 	}
 }
 
@@ -212,10 +220,6 @@ label {
 	font-size: 1.4rem;
 }
 
-input:active, input:focus {
-	-webkit-appearance: none;
-}
-
 input[type="checkbox"] {
 	margin-right: 5px;
 }
@@ -226,8 +230,13 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 	width: 100%;
 	box-sizing: border-box;
 	outline: none;
-	padding: 10px 15px;
+	padding: 10px;
 	margin-bottom: 15px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+	-webkit-appearance: none;
+	border-color: $blue;
 }
 
 textarea {

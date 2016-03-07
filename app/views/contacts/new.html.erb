@@ -1,6 +1,10 @@
 <div class="container margin-lg">
 
-<h1 class="page-title centered">Contact Jeremy</h1>
+	<h1 class="page-title centered">Contact Jeremy</h1>
+
+	<p class="u-text-center">
+		Please leave a message below and it will be sent directly to my email.
+	</p>
 
 	<%= form_for @contact do |f| %>
 		<%= f.label :name %>
@@ -9,7 +13,7 @@
 		<%= f.label :email %>
 		<%= f.email_field :email, required: true %>
 
-		<%= f.label :message, 'Write your message here:' %>
+		<%= f.label :message, 'Message:' %>
 		<%= f.text_area :message, as: :text %>
 		<div class="hidden">
 			<%= f.label :nickname %>

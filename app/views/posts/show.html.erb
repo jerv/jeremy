@@ -4,7 +4,7 @@
 </div>
 
 <div class="container margin-md">
-	<div class="margin-sm"><%= markdown @post.content %></div>
+	<div class="margin-sm markdown-body"><%= markdown @post.content %></div>
 
 	<% if user_signed_in? %>
 		<%= link_to 'Edit Post' , edit_post_path(@post), :class=>'u-button' %>

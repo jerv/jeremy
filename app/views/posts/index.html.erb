@@ -6,10 +6,10 @@
 	<% @posts.each do |post| %>
 		<%= link_to post, :class=>'m-posts-index' do %>
 			<h4 class="u-title">
-				<%= truncate(post.title, :length=>24) %>
+				<%= post.title %>
 			</h4>
 			<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
-			<p><%= truncate(post.content, :length=>60) %></p>
+			<p><%= truncate(post.content, :length=>140) %></p>
 		<% end %>
 	<% end %>
 </div>

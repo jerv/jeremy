@@ -7,10 +7,10 @@
 	<% @projects.each do |project| %>
 		<%= link_to project, :class=>'m-posts-index' do %>
 			<h4 class="u-title">
-				<%= truncate(project.title, :length=>24) %>
+				<%= project.title %>
 			</h4>			
 			<h5 class="u-date"><%= project.link %></h5>
-			<p><%= truncate(project.description, :length=>60) %></p>
+			<p><%= truncate(project.description, :length=>140) %></p>
 		<% end %>
 	<% end %>
 </div>
