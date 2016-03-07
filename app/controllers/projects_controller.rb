@@ -5,12 +5,12 @@ class ProjectsController < ApplicationController
 		@projects = Project.all.order("created_at DESC")
 	end
 	def new
-		@post = Project.new
+		@project = Project.new
 	end
 	def create
-		@post = Project.new post_params
-		if @post.save
-			redirect_to @post, notice: "Project Succesfully Saved"
+		@project = Project.new project_params
+		if @project.save
+			redirect_to @project, notice: "Project Succesfully Saved"
 		else
 			render new, notice: "BLARG, Creation failed."
 		end
@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def update
-		if @project.update post_params
+		if @project.update project_params
 			redirect_to @project, notice: "Project Succesfully Updated"
 		else
 			render edit, notice: "BLARG, Creation failed."
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
 	private
 
-	def post_params
+	def project_params
 		params.require(:project).permit(:title, :description, :link)
 	end
 

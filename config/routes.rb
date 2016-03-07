@@ -4,8 +4,14 @@ Rails.application.routes.draw do
   resources :projects
   resources :contacts, only: [:new, :create]
 
+  get '/admin' => redirect('/users/new')
+
+  get 'pages/about'
+
   get 'welcome/index'
   root 'welcome#index'
+
+  get '*path' => redirect('/')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

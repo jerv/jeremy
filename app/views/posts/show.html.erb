@@ -1,8 +1,13 @@
-<div class="container margin-md">
+<div class="article-title">
 	<h5 class="u-date"><%= @post.created_at.strftime('%A, %b %d') %></h5>
-	<h1 class="page-title"><%= @post.title %></h1>
+	<h1><%= @post.title %></h1>
+</div>
+
+<div class="container margin-md">
 	<div class="margin-sm"><%= markdown @post.content %></div>
 
-	<%= link_to 'Edit Post' , edit_post_path(@post), :class=>'u-button' %>
-	<%= link_to 'Delete Post' , post_path(@post), method: :delete, data: { confirm: "Are you sure you wish to delete this post?" }, :class=>'u-button u-button-grey' %>
+	<% if user_signed_in? %>
+		<%= link_to 'Edit Post' , edit_post_path(@post), :class=>'u-button' %>
+		<%= link_to 'Delete Post' , post_path(@post), method: :delete, data: { confirm: "Are you sure you wish to delete this post?" }, :class=>'u-button u-button-grey' %>
+	<% end %>
 </div>

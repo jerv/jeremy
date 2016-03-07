@@ -39,6 +39,16 @@
   <p class="alert"><%= alert %></p>
 <% end %>
 
+<% if user_signed_in? %>
+  <div class="admin-nav">
+    <div class="container">
+      <%= link_to 'Create Post', new_post_path %>
+      <%= link_to 'Add Project', new_project_path %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>      
+    </div>
+  </div>
+<% end %>
+
 <nav>
 	<div class="container">
 		<%= link_to "Jeremy Venegas", root_path , :class=>'site-id' %>
@@ -61,7 +71,12 @@
       <li><a href="https://github.com/jerv" target="_blank"><i class="fa fa-fw fa-github-square"></i></a></li>
     </ul>
     <h5>(559) 538-0167 <span>|</span> jeremymvenegas@gmail.com</h5>
-    <p>Jeremy Venegas is currently based in Fresno CA with his wife and baby boy.</p>
+    <p>
+      Jeremy Venegas is currently based in Fresno CA with his wife and baby boy.
+      <% if !user_signed_in? %>
+        <%= link_to 'Sign in', new_user_session_path %>
+      <% end %>
+    </p>
   </div>
 </footer>
 

@@ -3,16 +3,16 @@
 		<div class="col-xs-12 col-md-4">
 			<h2>About me</h2>
 			<p>
+				I am UI/UX Designer and Front end Developer from Fresno CA.
+			</p>
+			<p>
 				For over 3 years I have been developing &amp; designing websites.
 			</p>
 			<p>
-				I love html, css, javascript, and rails.
+				I want to thank you for visiting my site.
 			</p>
 			<p>
-			I want to thank you for visiting my site.
-			</p>
-			<p>
-				 Enjoy your stay.
+				 <%= link_to 'View Resume', 'https://www.linkedin.com/in/jeremyvenegas', :target=>'_blank' %> | <%= link_to 'About', pages_about_path %>
 			</p>
 		</div>
 		<div class="col-xs-12 col-md-4 l-home-posts">
@@ -26,7 +26,7 @@
 			<%= link_to 'View all', posts_path %>
 		</div>
 		<div class="col-xs-12 col-md-4">
-			<h2><%= link_to 'Stuff by me', projects_path %></h2>
+			<h2><%= link_to 'Projects', projects_path %></h2>
 			<% @projects.each do |project| %>
 					<h4 class="u-title">
 						<%= link_to truncate(project.title, :length=>24), project %>

@@ -1,5 +1,9 @@
-<div class="container margin-md">
-	<h1 class="page-title">View Projects</h1>
+<div class="article-title">
+	<h1 class="page-title">View all Projects</h1>
+</div>
+
+
+<div class="container margin-sm">
 	<% @projects.each do |project| %>
 		<%= link_to project, :class=>'m-posts-index' do %>
 			<h4 class="u-title">

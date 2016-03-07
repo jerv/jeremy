@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
+img {
+	max-width: 100%;
+}
+
 #content {
 	opacity: 0;
 	@media (min-width:991px) {
@@ -139,13 +143,13 @@ footer {
 			display: inline-block;
 			margin: 0;
 		}
-	}
-	a {
-		color: rgba(0,0,0,0.3);
-		font-size: 3.2rem;
-		transition: color 0.3s;
-		&:hover {
-			color: $blue;
+		a {
+			color: rgba(0,0,0,0.3);
+			font-size: 3.2rem;
+			transition: color 0.3s;
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 	p {
@@ -159,6 +163,29 @@ footer {
 		letter-spacing: 0;
 		text-transform: none;
 	}
+}
+
+.admin-nav {
+	background: $brown;
+	line-height: 36px;
+	text-align: center;
+	font-size:1.4rem;
+	a {
+		color: #fff;
+		padding: 0 15px;
+		display: inline-block;
+		&:hover, &:active, &:focus {
+			color: #fff;
+		}
+	}
+}
+
+.notice, .alert {
+	background: $blue;
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	line-height: 36px;
 }
 
 .js-fade-element-hide {
@@ -185,21 +212,22 @@ label {
 	font-size: 1.4rem;
 }
 
-input, textarea {
+input:active, input:focus {
+	-webkit-appearance: none;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	border: 1px solid #ddd;
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
 	outline: none;
 	padding: 10px 15px;
 	margin-bottom: 15px;
-}
-
-input:active, input:focus {
-	-webkit-appearance: none;
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea {
-	border: 1px solid #ddd;
 }
 
 textarea {
@@ -251,6 +279,30 @@ input[type="submit"] {
 	&.centered {
 		text-align: center;
 		font-size: 24px;
+	}
+}
+
+.article-title {
+	color: #fff;
+	text-align: center;
+	background: $brown;
+	padding: 35px 0;
+	h1 {
+		font-size: 28px;
+		margin: 0;
+	}
+	.u-date {
+		color: #fff;
+		margin-bottom: 15px;
+	}
+	h5 {
+		margin: 15px 0 0 0;
+	}
+	a {
+		color: #fff;
+		&:hover, &:active, &:focus {
+			color: #fff;
+		}
 	}
 }
 
@@ -326,4 +378,37 @@ input[type="submit"] {
 		line-height: 1.5;
 		margin-bottom: 10px;
 	}
+}
+
+$parallax-window-height: 30em;
+$parallax-background-height: $parallax-window-height * 1.2;
+
+.parallax-window {
+  max-height: $parallax-window-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.parallax-static-content {
+  color: #fff;
+  padding: 8.5em 0;
+  position: relative;
+  z-index: 9;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.parallax-background {
+  background: image-url("me.png") repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
 }
