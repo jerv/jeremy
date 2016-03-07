@@ -1,0 +1,12 @@
+<div class="container margin-md">
+	<h1 class="page-title">View Projects</h1>
+	<% @projects.each do |project| %>
+		<%= link_to project, :class=>'m-posts-index' do %>
+			<h4 class="u-title">
+				<%= truncate(project.title, :length=>24) %>
+			</h4>			
+			<h5 class="u-date"><%= project.link %></h5>
+			<p><%= truncate(project.description, :length=>60) %></p>
+		<% end %>
+	<% end %>
+</div>

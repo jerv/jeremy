@@ -21,7 +21,9 @@ h1, h2, h3, h4, h5 {
 
 #content {
 	opacity: 0;
-	min-height: 320px;
+	@media (min-width:991px) {
+		min-height: 320px;
+	}
 }
 
 a {
@@ -154,7 +156,7 @@ input:active, input:focus {
 	-webkit-appearance: none;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], textarea {
 	border: 1px solid #ddd;
 }
 
@@ -201,6 +203,10 @@ input[type="submit"] {
 	font-size: 32px;
 	margin: 0 0 35px 0;
 	line-height: 1;
+	&.centered {
+		text-align: center;
+		font-size: 24px;
+	}
 }
 
 .u-button {
@@ -234,6 +240,11 @@ input[type="submit"] {
 .u-title {
 	font-size: 16px;
 }
+
+.u-text-center {
+	text-align: center;
+}
+
 .u-date {
 	color: #777;
 	font-weight: 300;

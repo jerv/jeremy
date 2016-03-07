@@ -1,0 +1,8 @@
+<div class="container margin-md">
+	<h1 class="page-title"><%= @project.title %></h1>
+	<h5><%= link_to 'View website', @project.link %></h5>
+	<div class="margin-sm"><%= markdown @project.description %></div>
+
+	<%= link_to 'Edit project' , edit_project_path(@project), :class=>'u-button' %>
+	<%= link_to 'Delete project' , project_path(@project), method: :delete, data: { confirm: "Are you sure you wish to delete this project?" }, :class=>'u-button u-button-grey' %>
+</div>

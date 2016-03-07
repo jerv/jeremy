@@ -25,7 +25,13 @@
 			<% end %>
 		</div>
 		<div class="col-xs-12 col-md-4">
-			<h2>Stuff by me</h2>
+			<h2><%= link_to 'Stuff by me', projects_path %></h2>
+			<% @projects.each do |project| %>
+					<h4 class="u-title">
+						<%= link_to truncate(project.title, :length=>24), project %>
+					</h4>
+					<h5 class="u-date"><%= project.link %></h5>
+			<% end %>
 		</div>
 	</div>
 </div>

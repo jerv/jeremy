@@ -1,0 +1,21 @@
+<div class="container margin-md">
+
+<h1 class="page-title centered">Contact Jeremy</h1>
+
+	<%= form_for @contact do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name, required: true %>
+
+		<%= f.label :email %>
+		<%= f.email_field :email, required: true %>
+
+		<%= f.label :message, 'Write your message here:' %>
+		<%= f.text_area :message, as: :text %>
+		<div class="hidden">
+			<%= f.label :nickname %>
+			<%= f.text_field :nickname, hint: 'Leave this field blank' %>
+		</div>
+		<%= f.submit 'Send Message'%>
+	<% end %>
+
+</div>
