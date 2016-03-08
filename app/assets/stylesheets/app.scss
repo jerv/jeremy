@@ -34,11 +34,15 @@ img {
 	& > *:first-child {
 		margin-top: 0;
 	}
-	h1, h2 {
+	h1, h2, h3 {
 		margin-top: 65px;
+		font-weight: 300;
+		letter-spacing: 0;
+		text-transform: none;
 	}
-	h3, h4, h5 {
+	h4, h5 {
 		margin-top: 45px;
+		letter-spacing: 0.05em;
 	}
 }
 
