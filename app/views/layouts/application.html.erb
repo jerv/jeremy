@@ -3,7 +3,7 @@
 <head>
   <title>Jeremy Venegas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -55,6 +55,11 @@
     <%= link_to new_contact_path, :class=>'u-button' do %>
       <i class="fa fa-paper-plane-o"></i><span>Contact</span>
     <% end %>
+    <div class="sub-nav">
+      <%= link_to 'Projects', projects_path %>  
+      <%= link_to 'Thoughts', posts_path %>
+      <%= link_to 'About', pages_about_path %>
+    </div>
 	</div>
 </nav>
 

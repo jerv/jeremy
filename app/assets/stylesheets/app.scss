@@ -60,15 +60,44 @@ nav {
 	.container {
 		position: relative;
 	}
+	.sub-nav {
+		float: right;
+		display: inline-block;
+		line-height: 50px;
+		margin-right: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		font-size:1.4rem;
+		a {
+			display: inline-block;
+			float: right;
+			color: #333;
+			padding: 0 12px;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+		@media (max-width:660px) {
+			background: rgba(0,0,0,0.1);
+			box-shadow:0 1px rgba(0,0,0,0.1) inset;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			float: none;
+			font-size: 1.4rem;
+			a {
+				float: none;
+			}
+		}
+	}
 	a {
 		color: #fff;
 		display: inline-block;
 		transition: all 0.2s ease-out;
 		font-weight: bold;
-		&.new-link {
-			float: right;
-		}
-		&:hover, &:active {
+		&:hover, &:active, &:focus {
 			text-decoration: none;
 			color: rgba(250,250,250,0.85);
 		}
@@ -265,7 +294,7 @@ input[type="submit"] {
 	color: #fff;
 	background: $blue;
 	transition: all 0.2s ease-out;
-	letter-spacing:0.1em;
+	letter-spacing:0.2em;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1.4rem;
@@ -310,8 +339,8 @@ input[type="submit"] {
 	background: $brown;
 	padding: 35px 0;
 	h1 {
-		font-size: 28px;
 		margin: 0;
+		font-size: 28px;
 	}
 	.u-date {
 		color: #fff;
@@ -334,7 +363,7 @@ input[type="submit"] {
 	text-align: center;
 	color: #fff;
 	background: $blue;
-	letter-spacing:0.1em;
+	letter-spacing:0.2em;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size:1.4rem;
@@ -436,6 +465,7 @@ $parallax-background-height: $parallax-window-height * 1.2;
   position: relative;
   z-index: 9;
   font-size: 24px;
+  opacity: 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
