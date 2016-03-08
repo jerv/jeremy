@@ -174,10 +174,20 @@ footer {
 }
 
 .admin-nav {
-	background: $brown;
-	line-height: 36px;
-	text-align: center;
-	font-size:1.4rem;
+	background: #333;
+	line-height: 24px;
+	font-size:1.2rem;
+	&:before {
+		content:"Admin:";
+		display: inline-block;
+		color: #fff;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		float: left;
+		padding: 0 15px;
+	}
 	a {
 		color: #fff;
 		padding: 0 15px;
@@ -359,33 +369,43 @@ input[type="submit"] {
 	margin-bottom: 25px;
 }
 
-.m-post-show {
-	background: #fff;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-	border-radius: 3px;
-	padding: 15px;
-	margin-bottom: 15px;
-	@media (min-width:991px) {
-		padding: 25px;
+.m-item-index {
+	text-align: center;
+	color: #333;
+	padding: 25px 0;
+	display: block;
+	position:relative;
+	h4 {
+		margin-top: 0;
+	}
+	h5 {
 		margin-bottom: 0;
 	}
-	h2 {
-		margin: 0 0 10px 0;
-		font-size: 24px;
-		a {
+	&:hover, &:active, &:focus {
+		color: #333;
+		h4 {
+			color: $blue;
+		}
+		h5 {
 			color: #333;
-			text-decoration: none;
-			&:hover, &:active, &:focus {
-				color: $blue;
-			}
 		}
 	}
-	p {
-		color: #777;
-		font-weight: 300;
-		font-size: 18px;
-		line-height: 1.5;
-		margin-bottom: 10px;
+	&:after {
+		content:"";
+		display: block;
+		width: 50%;
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -25%;
+		background: #eee;
+	}
+	&:last-of-type:after {
+		display: none;
+	}
+	@media (min-width:991px) {
+		padding: 45px 0;
 	}
 }
 

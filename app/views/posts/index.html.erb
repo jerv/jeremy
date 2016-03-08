@@ -4,12 +4,11 @@
 
 <div class="container margin-sm">
 	<% @posts.each do |post| %>
-		<%= link_to post, :class=>'m-posts-index' do %>
+		<%= link_to post, :class=>'m-item-index' do %>
 			<h4 class="u-title">
 				<%= post.title %>
 			</h4>
 			<h5 class="u-date"><%= post.created_at.strftime('%A, %b %d') %></h5>
-			<p><%= truncate(post.content, :length=>140) %></p>
 		<% end %>
 	<% end %>
 </div>
