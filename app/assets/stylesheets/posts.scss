@@ -46,14 +46,24 @@
 }
 
 .skills {
-	margin: 25px 0;
+	margin: 25px auto;
+	display: block;
 	padding: 0;
 	list-style-type: none;
+	max-width: 720px;
 	li {
 		display: inline-block;
-		margin: 25px;			
+		margin: 15px;			
 	}
 	i {
-		font-size: 74px;
+		font-size: 32px;
+	}
+	@media (min-width:991px) {
+		i {
+			font-size: 74px;
+		}
+		li {
+			margin: 25px;			
+		}
 	}
 }
