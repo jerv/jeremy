@@ -1,13 +1,14 @@
 <div class="article-title">
 	<h1 class="page-title"><%= @project.title %></h1>
-	<h5><%= link_to 'View Work', @project.link %></h5>
+	<h5>
+		<%= link_to @project.link, :target=>'_blank', :class=>'u-button' do %>
+			<i class="fa fa-fw fa-external-link"></i> Open Work Sample
+		<% end %>
+	</h5>
 </div>
 
 <div class="container margin-md">
 	<div class="margin-sm markdown-body"><%= markdown @project.description %></div>
-	<div class="margin-sm">
-		<%= link_to 'View Work', @project.link, :class=>'u-button', :target=>'_blank' %>
-	</div>
 	<% if user_signed_in? %>
 		<div class="m-controls">
 			<%= link_to 'Edit project' , edit_project_path(@project), :class=>'u-button' %>

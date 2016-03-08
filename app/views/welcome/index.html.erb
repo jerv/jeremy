@@ -31,7 +31,11 @@
 					<h4 class="u-title">
 						<%= link_to truncate(project.title, :length=>50), project %>
 					</h4>
-					<h5 class="u-date"><%= link_to 'View Work', project.link, :target=>'_blank' %></h5>
+					<h5 class="u-date">
+						<%= link_to project.link, :target=>'_blank' do %>
+							Open Work Sample <i class="fa fa-external-link"></i>
+						<% end %>
+					</h5>
 			<% end %>
 			<%= link_to 'View all', projects_path %>
 		</div>
