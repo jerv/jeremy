@@ -7,7 +7,9 @@
 	<div class="margin-sm markdown-body"><%= markdown @post.content %></div>
 
 	<% if user_signed_in? %>
-		<%= link_to 'Edit Post' , edit_post_path(@post), :class=>'u-button' %>
-		<%= link_to 'Delete Post' , post_path(@post), method: :delete, data: { confirm: "Are you sure you wish to delete this post?" }, :class=>'u-button u-button-grey' %>
+		<div class="m-controls">
+			<%= link_to 'Edit Post' , edit_post_path(@post), :class=>'u-button' %>
+			<%= link_to 'Delete Post' , post_path(@post), method: :delete, data: { confirm: "Are you sure you wish to delete this post?" }, :class=>'u-button u-button-grey' %>
+		</div>
 	<% end %>
 </div>

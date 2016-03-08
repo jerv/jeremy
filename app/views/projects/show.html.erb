@@ -1,15 +1,17 @@
 <div class="article-title">
 	<h1 class="page-title"><%= @project.title %></h1>
-	<h5><%= link_to 'View website', @project.link %></h5>
+	<h5><%= link_to 'View Work', @project.link %></h5>
 </div>
 
 <div class="container margin-md">
 	<div class="margin-sm markdown-body"><%= markdown @project.description %></div>
-	<div class="u-text-center margin-sm">
-		<%= link_to 'View website', @project.link, :class=>'u-button' %>
+	<div class="margin-sm">
+		<%= link_to 'View Work', @project.link, :class=>'u-button' %>
 	</div>
 	<% if user_signed_in? %>
-		<%= link_to 'Edit project' , edit_project_path(@project), :class=>'u-button' %>
-		<%= link_to 'Delete project' , project_path(@project), method: :delete, data: { confirm: "Are you sure you wish to delete this project?" }, :class=>'u-button u-button-grey' %>
+		<div class="m-controls">
+			<%= link_to 'Edit project' , edit_project_path(@project), :class=>'u-button' %>
+			<%= link_to 'Delete project' , project_path(@project), method: :delete, data: { confirm: "Are you sure you wish to delete this project?" }, :class=>'u-button u-button-grey' %>
+		</div>
 	<% end %>
 </div>
