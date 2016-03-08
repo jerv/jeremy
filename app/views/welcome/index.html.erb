@@ -31,7 +31,7 @@
 					<h4 class="u-title">
 						<%= link_to truncate(project.title, :length=>50), project %>
 					</h4>
-					<h5 class="u-date"><%= link_to project.link, project.link %></h5>
+					<h5 class="u-date"><%= link_to project.link, project.link, :target=>'_blank' %></h5>
 			<% end %>
 			<%= link_to 'View all', projects_path %>
 		</div>

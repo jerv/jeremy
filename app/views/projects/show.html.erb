@@ -6,7 +6,7 @@
 <div class="container margin-md">
 	<div class="margin-sm markdown-body"><%= markdown @project.description %></div>
 	<div class="margin-sm">
-		<%= link_to 'View Work', @project.link, :class=>'u-button' %>
+		<%= link_to 'View Work', @project.link, :class=>'u-button', :target=>'_blank' %>
 	</div>
 	<% if user_signed_in? %>
 		<div class="m-controls">
