@@ -44,3 +44,16 @@
 	font-size: 18px;
 	line-height: 1.5;
 }
+
+.skills {
+	margin: 25px 0;
+	padding: 0;
+	list-style-type: none;
+	li {
+		display: inline-block;
+		margin: 25px;			
+	}
+	i {
+		font-size: 74px;
+	}
+}
