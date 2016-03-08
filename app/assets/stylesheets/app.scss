@@ -489,3 +489,9 @@ $parallax-background-height: $parallax-window-height * 1.2;
   top: - $parallax-window-height / 3;
   width: 100%;
 }
+
+@media (max-width: 720px) {
+	.parallax-window {
+		display: none;
+	}
+}
