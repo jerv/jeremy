@@ -26,7 +26,7 @@
 			<%= link_to 'View all', posts_path %>
 		</div>
 		<div class="col-xs-12 col-md-4">
-			<h2><%= link_to 'Projects', projects_path %></h2>
+			<h2><%= link_to 'Samples', projects_path %></h2>
 			<% @projects.each do |project| %>
 					<h4 class="u-title">
 						<%= link_to truncate(project.title, :length=>50), project %>
